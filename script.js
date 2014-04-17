@@ -9,7 +9,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 // 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください
 //  ※ログを確認するためにデバッグモード３で動かすこと
-//  ※シグナリングサーバとSTUNサーバ、TURNサーバはPeerJSの標準設定のまま利用すること。
+//  ※シグナリングサーバとSTUNサーバ、TURNサーバはPeerJSの標準設定のまま利用すること
 
 
 // 【問題２】PeerIDを生成して$('#my-id')にセットするコードを書いて下さい
