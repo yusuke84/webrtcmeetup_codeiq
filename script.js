@@ -7,7 +7,9 @@ var existingCall;
 // Compatibility
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-// 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください（ログを確認するためにデバッグモード３で動かすこと）
+// 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください
+//  ※ログを確認するためにデバッグモード３で動かすこと
+//  ※シグナリングサーバとSTUNサーバ、TURNサーバはPeerJSの標準設定のまま利用すること。
 
 
 // 【問題２】PeerIDを生成して$('#my-id')にセットするコードを書いて下さい
