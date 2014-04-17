@@ -9,11 +9,14 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 // 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください
 
+
 // 【問題２】PeerIDを生成して$('#my-id')にセットするコードを書いて下さい
+
 
 // 相手からのコールを受信したら自身のメディアストリームをセットして返答
 peer.on('call', function(call){
     //【問題３】自分のビデオストリームを相手に送信するコードを書いて下さい
+
     step3(call);
 });
 
@@ -29,6 +32,7 @@ $(function(){
     // 相手に接続
     $('#make-call').click(function(){
         //【問題４】相手に発信する為のコードを書いて下さい
+
         step3(call);
 
     });
@@ -52,7 +56,13 @@ $(function(){
 
 // メディアストリームを取得する
 function step1 () {
-    // 【問題５】相手に接続するためのコードを書いて下さい
+    // 【問題５】getUserMediaの以下のコード内のコメントを参考にコードを完成させえて下さい
+    navigator.getUserMedia(/* ビデオとオーディオストリームを取得するオプション */, function(stream){
+        // 相手からのビデオストリームを$('my-video')にセットする
+
+        // 取得したストリームを後で使うためにwindowオブジェクトに保存
+
+        step2();
     }, function(){ $('#step1-error').show(); });
 }
 
@@ -71,6 +81,7 @@ function step3 (call) {
     // 相手からのメディアストリームを待ち受ける
     call.on('stream', function(stream){
         // 【問題６】相手からのビデオストリームを$('their-video')にセットするコードを書いて下さい
+        
         $('#step1, #step2').hide();
         $('#step3').show();
     });
