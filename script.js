@@ -7,7 +7,7 @@ var existingCall;
 // Compatibility
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-// 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください
+// 【問題１】APIKEYを利用してPeerJSオブジェクトを生成してください（ログを確認するためにデバッグモード３で動かすこと）
 
 
 // 【問題２】PeerIDを生成して$('#my-id')にセットするコードを書いて下さい
@@ -15,7 +15,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 // 相手からのコールを受信したら自身のメディアストリームをセットして返答
 peer.on('call', function(call){
-    //【問題３】自分のビデオストリームを相手に送信するコードを書いて下さい
+    //【問題３】自分のビデオストリーム（window.localStream）を相手に送信するコードを書いて下さい
 
     step3(call);
 });
@@ -31,7 +31,7 @@ $(function(){
 
     // 相手に接続
     $('#make-call').click(function(){
-        //【問題４】相手に発信する為のコードを書いて下さい
+        //【問題４】自分のビデオストリーム（window.localStream）を用いて相手に発信する為のコードを書いて下さい
 
         step3(call);
 
